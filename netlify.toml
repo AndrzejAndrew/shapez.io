@@ -1,0 +1,8 @@
+[build]
+  command = "export NODE_OPTIONS=--openssl-legacy-provider && cd gulp && yarn install && touch ../src/js/core/config.local.js && yarn gulp build.web-shapezio"
+  publish = "build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
