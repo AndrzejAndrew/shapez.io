@@ -191,10 +191,10 @@ function gulptasksHTML($, gulp, buildFolder) {
         });
         gulp.task("html." + variant + ".prod", () => {
             return buildHtml({
-                googleAnalytics: !data.standalone,
+                googleAnalytics: false,
                 standalone: data.standalone,
-                integrity: true,
-                enableCachebust: !data.standalone,
+                integrity: false,
+                enableCachebust: false,
             });
         });
     }
