@@ -1,5 +1,5 @@
 [build]
-  command = "export NODE_OPTIONS=--openssl-legacy-provider && cd gulp && yarn install && touch ../src/js/core/config.local.js && yarn gulp build.web-shapezio && sed -i 's/integrity=\"[^\"]*\"//g' ../build/index.html"
+  command = "export NODE_OPTIONS=--openssl-legacy-provider && cd gulp && yarn install && touch ../src/js/core/config.local.js && yarn gulp build.web-shapezio && sed -i 's/integrity/nointegrity/g' ../build/index.html"
   publish = "build"
 
 [[redirects]]
