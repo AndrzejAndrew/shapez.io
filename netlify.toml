@@ -1,3 +1,8 @@
 [build]
-  command = "export NODE_OPTIONS=--openssl-legacy-provider && cd gulp && yarn install && touch ../src/js/core/config.local.js && yarn gulp build.web-localhost && cd ../build && mkdir -p v && ln -s . v/$(git rev-parse --short=7 HEAD)"
+  command = "export NODE_OPTIONS=--openssl-legacy-provider && cd gulp && yarn install && touch ../src/js/core/config.local.js && yarn gulp build.web-localhost"
   publish = "build"
+
+[[redirects]]
+  from = "/v/*"
+  to = "/:splat"
+  status = 200
