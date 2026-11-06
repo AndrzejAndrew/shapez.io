@@ -1,3 +1,3 @@
 [build]
-  command = "export NODE_OPTIONS=--openssl-legacy-provider && cd gulp && yarn install && touch ../src/js/core/config.local.js && yarn gulp build.web-localhost && sed -i 's/integrity/nointegrity/g' ../build/index.html && ls -la ../build"
+  command = "export NODE_OPTIONS=--openssl-legacy-provider && cd gulp && yarn install && touch ../src/js/core/config.local.js && yarn gulp build.web-localhost && cp -n ../build/res/fonts/* ../build/ 2>/dev/null || true && sed -i 's/\\.integrity/\\.nointegrity/g' ../build/index.html && sed -i 's/\"integrity\"/\"nointegrity\"/g' ../build/index.html && sed -i 's/integrity=/nointegrity=/g' ../build/index.html"
   publish = "build"
